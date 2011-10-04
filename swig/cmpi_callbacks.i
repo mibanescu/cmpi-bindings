@@ -126,9 +126,10 @@ typedef struct _CMPIBroker {} CMPIBroker;
   void modifyInstance(
     const CMPIContext *ctx,
     const CMPIObjectPath *op,
-    const CMPIInstance *inst)
+    const CMPIInstance *inst,
+    const char **properties)	    
   {
-    RAISE_IF(CBModifyInstance($self, ctx, op, inst));
+    RAISE_IF(CBModifyInstance($self, ctx, op, inst, properties));
   }
 
   void deleteInstance(
