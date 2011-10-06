@@ -292,7 +292,7 @@ target_charptr(Target_Type target)
     str = StringValuePtr(target_s);
   }
 #else
-#error target_charptr not defined
+#warning target_charptr not defined
   str = NULL;
 #endif
   return str;
